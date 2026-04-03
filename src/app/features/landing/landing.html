@@ -1,0 +1,433 @@
+<!-- HEADER -->
+<header class="bg-brandBlue brutal-border border-b-8 border-brandBlack sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav class="landing-nav flex space-x-2 md:space-x-6">
+      <a class="landing-nav-link bg-brandBlack text-brandWhite px-4 py-2 brutal-border font-heading text-sm uppercase" href="#">HOME</a>
+      <a class="landing-nav-link px-4 py-2 hover:bg-brandBlack hover:text-brandWhite transition-colors font-heading text-sm uppercase" routerLink="/menu">MENU</a>
+      <a class="landing-nav-link px-4 py-2 hover:bg-brandBlack hover:text-brandWhite transition-colors font-heading text-sm uppercase cursor-pointer" (click)="showShopModal = true">GIOCHI</a>
+      <a class="landing-nav-link px-4 py-2 hover:bg-brandBlack hover:text-brandWhite transition-colors font-heading text-sm uppercase hidden md:block" href="#chi-siamo">CHI SIAMO</a>
+      <a class="landing-nav-link px-4 py-2 hover:bg-brandBlack hover:text-brandWhite transition-colors font-heading text-sm uppercase hidden md:block" href="#contatti">CONTATTI</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/ludoteca.lacivetta" target="_blank" rel="noopener"
+        class="w-9 h-9 flex items-center justify-center brutal-border border-4 border-brandBlack bg-brandBlack text-brandWhite hover:bg-brandWhite hover:text-[#1877F2] transition-colors shadow-brutal">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/la_civetta_ludopub/" target="_blank" rel="noopener"
+        class="w-9 h-9 flex items-center justify-center brutal-border border-4 border-brandBlack bg-brandBlack text-brandWhite hover:bg-brandWhite hover:text-[#E1306C] transition-colors shadow-brutal">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.333 2.175 8.741 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </a>
+      <!-- PRENOTA -->
+      <button class="font-heading text-sm uppercase bg-brandWhite text-brandBlack px-6 py-2 brutal-border shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-pointer" (click)="showBookingModal = true">
+        PRENOTA ORA
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-section min-h-screen flex items-center relative z-10 overflow-hidden" style="background-image: url('assets/img/bg-white.jpg'); background-size: cover; background-position: center;">
+  <div class="container mx-auto px-6 md:px-12 py-16">
+    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+
+      <!-- LEFT: content -->
+      <div class="w-full md:w-1/2 flex flex-col items-start">
+        <img src="assets/logo/civetta-1.png" alt="La Civetta LudoPub" class="hero-logo-img w-28 h-28 md:w-40 md:h-40 object-contain drop-shadow-[4px_4px_0px_rgba(0,136,204,1)] mb-6" />
+        <h1 class="hero-title font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-none tracking-tighter text-brandBlack uppercase mb-4">
+          LA CIVETTA<br/>LUDOPUB:<br/>GIOCA,<br/>MANGIA, BEVI.
+        </h1>
+        <p class="hero-subtitle text-base md:text-lg font-bold font-heading text-brandBlack uppercase opacity-70 mb-8">
+          OLTRE 7000 GIOCHI DA TAVOLO.<br/>APERTI TUTTI I GIORNI.
+        </p>
+        <button class="font-heading text-lg uppercase bg-brandBlue text-brandBlack px-10 py-4 brutal-border border-4 border-brandBlack shadow-brutal hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all cursor-pointer" (click)="showBookingModal = true">
+          PRENOTA UN TAVOLO
+        </button>
+      </div>
+
+      <!-- RIGHT: carousel -->
+      <div class="hero-carousel w-full md:w-1/2">
+        <div class="relative -rotate-1">
+          <div class="relative overflow-hidden brutal-border border-8 border-brandBlack shadow-brutal" style="aspect-ratio: 4/3;">
+            @for (img of heroImages; track img; let i = $index) {
+              <img [src]="img" [alt]="'La Civetta LudoPub - foto ' + (i + 1)"
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+                [class.opacity-100]="i === currentSlide"
+                [class.opacity-0]="i !== currentSlide" />
+            }
+            <!-- Dots -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+              @for (img of heroImages; track img; let i = $index) {
+                <button
+                  class="w-5 h-5 brutal-border border-2 border-brandBlack transition-all duration-300 cursor-pointer shadow-[2px_2px_0px_#111]"
+                  [class.bg-brandBlue]="i === currentSlide"
+                  [class.bg-brandWhite]="i !== currentSlide"
+                  [class.scale-125]="i === currentSlide"
+                  (click)="goToSlide(i)">
+                </button>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section bg-brandBlack py-24 relative z-0">
+  <div class="container mx-auto px-4 mt-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+      <!-- Card 1 — Menu -->
+      <div class="feature-card bg-brandWhite brutal-border border-8 p-8 flex flex-col items-center text-center shadow-brutal hover:-translate-y-2 transition-transform">
+        <div class="bg-brandBlue p-4 brutal-border border-4 -mt-16 mb-6 shadow-brutal w-24 h-24 flex items-center justify-center shrink-0">
+          <svg class="w-12 h-12 text-brandBlack" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h3 class="font-heading text-2xl mb-4 uppercase">MENU DEL LUDOPUB</h3>
+        <p class="mb-8 font-medium">Panini, burger, fritti, e snack per la tua serata di gioco.</p>
+        <a class="font-heading text-sm uppercase bg-brandBlue text-brandBlack px-6 py-2 brutal-border shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all mt-auto w-full max-w-[200px]" routerLink="/menu">
+          CONSULTA IL MENU
+        </a>
+      </div>
+
+      <!-- Card 2 — Orari -->
+      <div class="feature-card bg-brandWhite brutal-border border-8 p-8 flex flex-col items-center text-center shadow-brutal hover:-translate-y-2 transition-transform">
+        <div class="bg-brandBlue p-4 brutal-border border-4 -mt-16 mb-6 shadow-brutal w-24 h-24 flex items-center justify-center shrink-0">
+          <svg class="w-12 h-12 text-brandBlack" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-heading text-2xl mb-4 uppercase">ORARI</h3>
+        <p class="mb-2 font-medium">Il ludopub di Roma aperto tutti i giorni.</p>
+        <p class="font-heading text-sm mb-1"><span class="font-bold">Dom – Gio:</span> 18:30 – 02:00</p>
+        <p class="font-heading text-sm mb-8"><span class="font-bold">Ven – Sab:</span> 18:30 – 02:30</p>
+        <button class="font-heading text-sm uppercase bg-brandBlue text-brandBlack px-6 py-2 brutal-border shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all mt-auto w-full max-w-[200px] cursor-pointer" (click)="showBookingModal = true">
+          PRENOTA UN TAVOLO
+        </button>
+      </div>
+
+      <!-- Card 3 — Shop -->
+      <div class="feature-card bg-brandWhite brutal-border border-8 p-8 flex flex-col items-center text-center shadow-brutal hover:-translate-y-2 transition-transform">
+        <div class="bg-brandBlue p-4 brutal-border border-4 -mt-16 mb-6 shadow-brutal w-24 h-24 flex items-center justify-center shrink-0">
+          <svg class="w-12 h-12 text-brandBlack" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-heading text-2xl mb-4 uppercase">COMPRA I NOSTRI GIOCHI</h3>
+        <p class="mb-8 font-medium">Porta a casa i tuoi giochi preferiti dal nostro shop!</p>
+        <button class="font-heading text-sm uppercase bg-brandBlue text-brandBlack px-6 py-2 brutal-border shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all mt-auto w-full max-w-[200px] cursor-pointer" (click)="showShopModal = true">
+          ACQUISTA ORA
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section id="chi-siamo" class="history-section bg-brandBlack py-16 text-brandWhite">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
+      <div class="history-image w-full md:w-1/2">
+        <img src="assets/img/CivettaInsegna.png" alt="La Civetta LudoPub - Insegna"
+          class="w-full h-auto brutal-border-blue border-8 shadow-brutal-blue object-cover" />
+      </div>
+      <div class="history-text w-full md:w-1/2">
+        <h2 class="font-heading text-3xl mb-6 text-brandWhite uppercase">LA NOSTRA STORIA</h2>
+        <p class="text-sm leading-relaxed font-mono opacity-80">
+          La Civetta è la ludoteca di Roma dal 2001. Nel nostro<br/>
+          generoso locale abbiamo di tutto: dai venti albere da<br/>
+          passeggio a entrate giuste se guardi molto. Sviluppato da<br/>
+          appassionati di Serate Iniziate, con un innumerevole presenze<br/>
+          costante. Restiamo a favore dei tornei, possiamo consensualmente<br/>
+          fare feste indimenticabili in locale staff.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section class="staff-section bg-brandBlack py-16 text-brandWhite">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="font-heading text-3xl mb-12 uppercase">IL NOSTRO STAFF</h2>
+    <div class="flex flex-wrap justify-center items-center gap-6">
+      @for (member of staffMembers; track member.name) {
+        <div class="staff-member-wrap group cursor-pointer flex flex-col items-center">
+          <div class="staff-member relative w-32 h-32 group-hover:w-44 group-hover:h-44 rounded-full overflow-hidden brutal-border-blue border-8 bg-gray-700 transition-all duration-300 ease-out">
+            <img [src]="member.img" [alt]="member.name" class="w-full h-full object-cover object-top" />
+            <!-- Name overlay on hover -->
+            <div class="absolute inset-0 flex items-center justify-center bg-brandBlack/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="font-heading text-sm text-brandWhite uppercase text-center leading-tight px-3">{{ member.name }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM FEED — COMING SOON -->
+<!-- INSTAGRAM + TESTIMONIALS — sfondo continuo -->
+<div class="relative text-brandWhite border-t-4 border-brandBlue overflow-hidden" style="background-image: url('assets/img/bg-dark.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-brandBlack/75"></div>
+
+  <!-- INSTAGRAM FEED — COMING SOON -->
+  <section class="relative z-10 py-16">
+    <div class="container mx-auto px-4 text-center max-w-4xl">
+      <h2 class="font-heading text-3xl mb-6 uppercase">Seguici su Instagram</h2>
+      <div class="brutal-border border-4 border-brandBlue bg-brandBlack p-6 md:p-10 relative overflow-hidden">
+        <!-- Placeholder grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 opacity-20">
+          <div class="aspect-square bg-gray-600 brutal-border border-2"></div>
+          <div class="aspect-square bg-gray-700 brutal-border border-2"></div>
+          <div class="aspect-square bg-gray-600 brutal-border border-2"></div>
+          <div class="aspect-square bg-gray-700 brutal-border border-2"></div>
+          <div class="aspect-square bg-gray-600 brutal-border border-2"></div>
+          <div class="aspect-square bg-gray-700 brutal-border border-2"></div>
+        </div>
+        <!-- Coming soon overlay -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="bg-brandBlue text-brandBlack brutal-border border-8 px-12 py-8 shadow-brutal -rotate-2">
+            <p class="font-heading text-4xl md:text-5xl uppercase tracking-wider">Coming Soon</p>
+            <p class="font-mono text-sm mt-2 font-bold uppercase">Il nostro feed Instagram in arrivo</p>
+          </div>
+        </div>
+      </div>
+      <a class="inline-block mt-8 font-heading text-sm uppercase bg-brandBlue text-brandBlack px-8 py-3 brutal-border border-4 shadow-brutal hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        Seguici su Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section relative z-10 py-16 pb-32">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="font-heading text-3xl mb-16 text-brandWhite uppercase">DICONO DI NOI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        @for (t of testimonials; track t.name; let i = $index) {
+          <div class="testimonial-card relative" [style]="'--delay:' + (i * 180) + 'ms'">
+            <div class="bg-brandBlue brutal-border border-4 p-6 pt-8 pb-12 shadow-brutal relative z-10 min-h-[160px] text-left">
+              <span class="text-brandBlack text-5xl font-heading absolute top-2 left-2 opacity-50">"</span>
+              <p class="text-xs font-mono font-medium leading-tight relative z-20">{{ t.text }}</p>
+              <span class="text-brandBlack text-5xl font-heading absolute bottom-[-10px] right-2 opacity-50">"</span>
+            </div>
+            <!-- Mock user avatar -->
+            <div class="absolute -left-6 top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full overflow-hidden brutal-border border-4 border-brandBlue bg-gray-700 flex items-center justify-center">
+              <svg class="w-10 h-10 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+            </div>
+            <div class="bg-brandWhite brutal-border border-4 py-1 px-4 inline-block shadow-brutal absolute -bottom-4 left-8 z-20">
+              <span class="font-heading text-sm text-brandBlack">{{ t.name }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CONTATTI -->
+<section id="contatti" class="relative overflow-hidden py-16 border-t-8 border-brandBlack">
+  <!-- Parallax background -->
+  <div class="absolute inset-0 z-0">
+    <img src="assets/img/herosection.jpg" alt="" aria-hidden="true"
+      class="contatti-parallax-img w-full object-cover absolute top-[-15%] left-0"
+      style="height: 130%;" />
+    <div class="absolute inset-0 bg-brandWhite/92"></div>
+  </div>
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="font-heading text-4xl md:text-5xl uppercase mb-12 text-center">CONTATTI</h2>
+    <div class="flex flex-col lg:flex-row gap-0 brutal-border border-8 border-brandBlack overflow-hidden shadow-brutal max-w-6xl mx-auto">
+
+      <!-- Info contatti -->
+      <div class="lg:w-2/5 bg-brandBlue p-8 md:p-10 flex flex-col gap-8 border-b-8 lg:border-b-0 lg:border-r-8 border-brandBlack">
+
+        <!-- Email -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-brandBlack text-brandWhite brutal-border border-4 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-heading text-xs uppercase mb-1 opacity-70">Email</p>
+            <a href="mailto:asscivetta@gmail.com" class="font-heading text-lg uppercase hover:underline break-all">asscivetta&#64;gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Telefono -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-brandBlack text-brandWhite brutal-border border-4 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-heading text-xs uppercase mb-1 opacity-70">Telefono</p>
+            <a href="tel:+390670037523" class="font-heading text-lg uppercase hover:underline">(+39) 06 700 3752</a>
+          </div>
+        </div>
+
+        <!-- Indirizzo -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-brandBlack text-brandWhite brutal-border border-4 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-heading text-xs uppercase mb-1 opacity-70">Indirizzo</p>
+            <p class="font-heading text-lg uppercase leading-snug">Via Cereate, 8<br/>00183 Roma (San Giovanni)</p>
+          </div>
+        </div>
+
+        <!-- Orari rapidi -->
+        <div class="mt-auto brutal-border border-4 border-brandBlack bg-brandBlack text-brandWhite p-4">
+          <p class="font-heading text-xs uppercase mb-2 opacity-70">Orari di apertura</p>
+          <p class="font-heading text-sm"><span class="font-bold">Dom – Gio:</span> 18:30 – 02:00</p>
+          <p class="font-heading text-sm"><span class="font-bold">Ven – Sab:</span> 18:30 – 02:30</p>
+        </div>
+
+      </div>
+
+      <!-- Google Maps -->
+      <div class="lg:w-3/5 min-h-[360px]">
+        <iframe
+          src="https://maps.google.com/maps?q=Via+Cereate,+8,+00183+Roma&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0; min-height:360px; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="La Civetta LudoPub - Via Cereate 8, Roma">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="landing-footer bg-brandBlue border-t-8 border-brandBlack text-brandBlack py-12">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center md:items-start divide-y-4 md:divide-y-0 md:divide-x-4 divide-brandBlack">
+
+      <!-- Social -->
+      <div class="w-full md:w-1/3 text-center md:text-left py-6 md:py-0 md:pr-8 flex flex-col items-center">
+        <h3 class="font-heading text-2xl mb-4 uppercase">SOCIAL</h3>
+        <div class="flex gap-4">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/ludoteca.lacivetta" target="_blank" rel="noopener"
+            class="w-12 h-12 flex items-center justify-center brutal-border border-4 bg-brandBlack text-brandWhite hover:bg-brandWhite hover:text-[#1877F2] transition-colors shadow-brutal-white">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/la_civetta_ludopub/" target="_blank" rel="noopener"
+            class="w-12 h-12 flex items-center justify-center brutal-border border-4 bg-brandBlack text-brandWhite hover:bg-brandWhite hover:text-[#E1306C] transition-colors shadow-brutal-white">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.333 2.175 8.741 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contatti -->
+      <div class="w-full md:w-1/3 text-center py-6 md:py-0 flex flex-col items-center gap-2">
+        <h3 class="font-heading text-2xl mb-4 uppercase">CONTATTI</h3>
+        <a href="mailto:asscivetta@gmail.com" class="font-heading text-sm uppercase bg-brandBlack text-brandWhite px-4 py-2 brutal-border border-4 shadow-brutal-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all inline-block break-all">
+          asscivetta&#64;gmail.com
+        </a>
+        <a href="tel:+390670037523" class="font-heading text-sm uppercase bg-brandBlack text-brandWhite px-4 py-2 brutal-border border-4 shadow-brutal-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all inline-block">
+          (+39) 06 700 3752
+        </a>
+      </div>
+
+      <!-- Indirizzo -->
+      <div class="w-full md:w-1/3 text-center md:text-right py-6 md:py-0 md:pl-8 flex flex-col items-center">
+        <h3 class="font-heading text-2xl mb-4 uppercase">INDIRIZZO</h3>
+        <p class="font-bold font-mono text-sm leading-tight text-center">
+          VIA CEREATE, 8<br/>
+          00183 ROMA (SAN GIOVANNI)
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<!-- SHOP MODAL — IN SVILUPPO -->
+@if (showShopModal) {
+  <div class="fixed inset-0 z-[999] flex items-center justify-center p-4" (click)="showShopModal = false">
+    <div class="absolute inset-0 bg-brandBlack/80 backdrop-blur-sm"></div>
+    <div class="relative bg-brandWhite brutal-border border-8 border-brandBlack shadow-brutal max-w-lg w-full p-10 text-center rotate-1" (click)="$event.stopPropagation()">
+      <button class="absolute top-3 right-3 w-10 h-10 bg-brandBlack text-brandWhite font-heading text-xl brutal-border flex items-center justify-center hover:bg-brandBlue hover:text-brandBlack transition-colors cursor-pointer" (click)="showShopModal = false">
+        ✕
+      </button>
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-brandBlue brutal-border border-4 shadow-brutal mb-6">
+        <svg class="w-10 h-10 text-brandBlack" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+      </div>
+      <h2 class="font-heading text-4xl md:text-5xl uppercase mb-4 tracking-tight">In Sviluppo</h2>
+      <div class="w-24 h-1 bg-brandBlue mx-auto mb-6"></div>
+      <p class="font-mono text-sm mb-6 leading-relaxed">
+        Il nostro shop online è in fase di sviluppo.<br/>
+        Presto potrai acquistare i tuoi giochi preferiti direttamente dal sito!
+      </p>
+      <div class="inline-block bg-brandBlue text-brandBlack brutal-border border-4 px-6 py-3 shadow-brutal -rotate-1">
+        <p class="font-heading text-sm uppercase">Resta aggiornato sui nostri social</p>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- BOOKING MODAL — COMING SOON -->
+@if (showBookingModal) {
+  <div class="fixed inset-0 z-[999] flex items-center justify-center p-4" (click)="showBookingModal = false">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-brandBlack/80 backdrop-blur-sm"></div>
+    <!-- Modal -->
+    <div class="relative bg-brandWhite brutal-border border-8 border-brandBlack shadow-brutal max-w-lg w-full p-10 text-center -rotate-1" (click)="$event.stopPropagation()">
+      <!-- Close button -->
+      <button class="absolute top-3 right-3 w-10 h-10 bg-brandBlack text-brandWhite font-heading text-xl brutal-border flex items-center justify-center hover:bg-brandBlue hover:text-brandBlack transition-colors cursor-pointer" (click)="showBookingModal = false">
+        ✕
+      </button>
+      <!-- Icon -->
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-brandBlue brutal-border border-4 shadow-brutal mb-6">
+        <svg class="w-10 h-10 text-brandBlack" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <!-- Content -->
+      <h2 class="font-heading text-4xl md:text-5xl uppercase mb-4 tracking-tight">Coming Soon</h2>
+      <div class="w-24 h-1 bg-brandBlue mx-auto mb-6"></div>
+      <p class="font-mono text-sm mb-6 leading-relaxed">
+        Stiamo lavorando al sistema di prenotazione online.<br/>
+        Presto potrai riservare il tuo tavolo direttamente dal sito!
+      </p>
+      <div class="inline-block bg-brandBlue text-brandBlack brutal-border border-4 px-6 py-3 shadow-brutal rotate-1">
+        <p class="font-heading text-sm uppercase">Nel frattempo contattaci sui social</p>
+      </div>
+    </div>
+  </div>
+}

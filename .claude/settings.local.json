@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r -i \"gemelli\\\\|policlinico\" /c/Users/francesco.gentile/Desktop/LaCivettaLudoPub/src --include=*.ts --include=*.js --include=*.html --include=*.json --include=*.css --include=*.scss)",
+      "Bash(grep -r -i \"gemelli\\\\|policlinico\" /c/Users/francesco.gentile/Desktop/LaCivettaLudoPub --include=*.json --include=*.txt --include=*.md --include=*.yaml --include=*.yml --include=*.xml)",
+      "Bash(grep -E '\\\\.\\(md|env|txt|config|yml|yaml\\)$')",
+      "Bash(grep -r menu.html /c/Users/francesco.gentile/Desktop/LaCivettaLudoPub --include=*.json --include=*.ts --include=*.js)",
+      "Bash(grep -r stitch /c/Users/francesco.gentile/Desktop/LaCivettaLudoPub --include=*.ts --include=*.js --include=*.json --include=*.html)",
+      "Bash(grep -r base.store.example /c/Users/francesco.gentile/Desktop/LaCivettaLudoPub --include=*.ts --include=*.js)",
+      "Bash(npx ng:*)"
+    ]
+  }
+}
