@@ -17,6 +17,7 @@ export class Landing implements AfterViewInit, OnDestroy {
 
   showBookingModal = false;
   showShopModal = false;
+  mobileMenuOpen = false;
   private gsapCtx: any;
   private cdr = inject(ChangeDetectorRef);
   private ngZone = inject(NgZone);
